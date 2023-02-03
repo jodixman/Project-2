@@ -1,0 +1,785 @@
+:root{
+    --green:#267905;
+    --light-green:#ccdf8b;
+    --green-hd : #c8e38b;
+    --gren-tx : #6f9836;
+    --green-hed: #6eaa43;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+
+body{ /*BIKIN Background 2 warna*/
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(
+        to right,
+        var(--green) 0%, 
+        var(--green) 50%,
+        var(--light-green) 50%,
+        var(--light-green) 100%
+    );
+
+}
+
+/*---------------------------------Header----------------------------------------------*/
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .up{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+}
+
+
+.header .up p{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.header .up .left{
+    color: #67a53d;
+}
+
+.header .up .right{
+    color: #6d9b37;
+}
+
+.header .up .burger{
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #6d9b37;
+    transition: 0.1s;
+}
+
+.header .up .burger:hover{
+    color: white;
+}
+
+.header .up #menu-burger i.fatimes{
+    transform: rotate(180deg);
+}
+
+.header .botom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    right: 8.5%;
+}
+
+.header .botom ul{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10rem;
+    position: relative;
+    bottom: 2rem;
+    font-size: 2.5rem;
+    line-height: 6rem;
+    list-style: none;
+    border-top: 2.5px solid;
+    color: var(--green-hed);
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.header .botom ul li a{
+    color: var(--green-hed);
+    transition: 0.2s;
+}
+
+.header .botom ul li a:hover{
+    color: white;
+    
+}
+
+.header .botom ul.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*---------------------------------Home---------------------------------------------*/
+
+.home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+    bottom: 30rem;
+}
+
+.home .title{
+    text-align: center;
+}
+
+.home .title h1{
+    flex: 1 1 40rem;
+    margin-left: -7rem;
+    font-size: 12rem;
+    color: #c9e28a;
+}
+
+.home .title h1 span{
+    color: #337d0f;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.main .left{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .left .box{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3rem 0;
+    border-top: 1px solid;
+    align-items: flex-start;
+    color: #c1e089;
+}
+
+
+.main .left .box p{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rem;
+    text-align: right;
+}
+
+.main .mid{
+    flex: 1 1 40rem;
+}
+
+.main .mid img{
+    border-radius: 50%;
+}
+
+.main .mid img:hover{
+    transform: scale(1.1);
+}
+
+.main .right{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #80aa4d;
+    margin-top: 10rem;
+    font-weight: bold;
+}
+
+.main .right .text-up{
+    padding: 1rem 10rem 10rem 7rem;
+}
+
+.main .right .list p{
+    padding: 2rem 32rem 2rem 0;
+    line-height: 5rem;
+    border-top: 1px solid ;
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.main .right .list p i{
+    position: relative;
+    left: 30rem;
+}
+
+.main .right .list p:hover i{
+    transform: translateX(13px);
+}
+
+
+
+/*---------------------------------Store---------------------------------------------*/
+
+.store{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store .left{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.store .left .uppercase{
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccdc8b;
+}
+
+.store .left .uppercase h1{
+    font-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.store .left .uppercase a i{
+    font-size: 15rem;
+    margin-left: 30rem;
+    margin-bottom: 10rem;
+    cursor: pointer;
+    color: #ccdc8b;
+}   
+
+.store .left .uppercase a i:hover{
+    color: white;
+}
+
+
+.store .left .low{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.store .left .low img{
+    border-radius: 20%;
+}
+
+.store .left .low img:hover{
+    transform: scale(1.1);
+}
+
+.store .left .low .text-p{
+    color: #ccdc8b;
+    padding-top: 2rem;
+    font-size: 1rem;
+    gap: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store .right{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    color: #337d0f;
+}
+
+
+.store .right .text-p{
+    font-size: 2rem;
+    padding: 0 17rem;
+}
+
+.store .right .list{
+    font-size: 5rem;
+}
+
+.store .right .list p {
+    border-top: 1px solid;
+    padding: 5rem 13rem 5rem 0;
+    color: #39790a;
+}
+
+.store .right .list p span{
+    padding-right: 5rem;
+    font-weight: bold;
+}
+
+
+/*---------------------------------About Us---------------------------------------------*/
+
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100rem;
+    background:linear-gradient(
+        to right,
+        var(--green) 50%, 
+        var(--green) 60%,
+        var(--light-green) 60%,
+        var(--light-green) 100%
+    );
+}
+
+.about .left h1{
+    width: 80%;
+    font-size: 10rem;
+    margin: 0 10rem;
+    color: #c7f094;
+}
+
+.about .mid img{
+    margin-right: 10rem;
+    width: 80rem;
+}
+
+.about .right{
+    font-size: 2rem;
+    margin-right: 10rem;
+}
+
+.about .right h1{
+    font-size: 2rem;
+    padding:2rem 0;
+    color: #4f7f18;
+}
+
+.about .right p{
+    width: 29rem;   
+    align-items: center;
+    color: #4f7f18;
+    
+}
+
+/*---------------------------------Academy---------------------------------------------*/
+
+
+.academy{
+    width: 100%;
+    padding: 5rem 0 10rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(
+        to bottom,
+        var(--green) 0%, 
+        var(--green) 45%,
+        var(--light-green) 45%,
+        var(--light-green) 100%
+    );
+}
+
+.academy h1{
+    font-size: 24rem;
+    color: #c7f094;
+}
+
+.academy .circle{
+    margin-top: 9rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.academy .circle .text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: anim 10s linear infinite; /*Animation ini untuk agar bisa di animasi gambar atau text*/
+}   
+
+.academy .circle .text span{ /*Ini bagian untuk mengedit Letak si Text melingkar*/
+    position: absolute;
+    left: 95rem;
+    top: 30rem;
+    font-size: 2.2em;
+    transform-origin:0 190px ;
+
+}
+
+@keyframes anim{ /*ketfram animasinya seperti ini*/
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}    
+
+.academy .circle .image-on{
+
+    background-color: var(--light-green);
+    border-radius: 50%;
+
+}
+
+
+.academy .botom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20rem;
+}
+
+.academy .botom img{
+    padding-left: 10rem;
+    width: 90%;
+}
+
+.academy .botom img:hover{
+    transform: scale(1.1);
+}
+
+.academy .botom .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.academy .botom .right .top{
+    margin-right: 18rem;
+    margin-bottom: 5rem;
+
+}
+
+.academy .botom .right .top h3{
+    padding: 4rem 0 4rem 0;
+    font-size: 3rem;
+    border-top: 1px solid var(--green);
+    cursor: pointer;
+}
+
+.academy .botom .right .top h3 i{
+    padding-left: 50rem;
+}
+
+.academy .botom .right .top h3:hover i{
+    transform: translateX(13px);
+}
+
+.academy .botom .right .low{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.academy .botom .right .low p{
+    font-size: 2rem;
+    width: 60%;
+    line-height: 3rem;
+}
+
+.academy .botom .right .low img{
+    width: 50%;
+    margin-right: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Screen*/
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    
+    /*Home*/
+
+    .home .title h1{
+        flex: 1 1 40rem;
+        margin-left: -7rem;
+        font-size: 9rem;
+        color: #c9e28a;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .main .right .text-up{
+        padding: 0 10rem 10rem 10rem;
+        font-size: 3rem;
+    }
+
+    .main .right .list{
+        font-size: 3.5rem;
+    }
+
+    .main .left .box{
+        font-size: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 3rem 0;
+        border-top: 1px solid;
+        align-items: flex-start;
+        color: #7daa4d;
+    }
+
+    /*Store*/
+
+    .store{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+    }
+
+    
+    .store .left{
+        flex: 1 1 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #7daa4d;
+    }
+
+    .store .left .uppercase{
+        margin-left: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #7daa4d;
+    }
+
+    .store .left .uppercase a i{
+        font-size: 10rem;
+        color: #7daa4d;
+    }
+
+    .store .left .low .text-p{
+        color: #7daa4d;
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        gap: 20rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .store .right{
+        flex: 1 1 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        color: #7daa4d;
+    }
+
+    .store .right .list p {
+        border-top: 1px solid;
+        padding: 5rem 13rem 5rem 0;
+        color: #7daa4d;
+    }
+
+    /*About*/
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50rem;
+        background:linear-gradient(
+            to right,
+            var(--green) 0%, 
+            var(--green) 50%,
+            var(--light-green) 50%,
+            var(--light-green) 100%
+        );
+    }
+
+    .about .left{
+        margin: 0 10rem;
+    }
+
+    .about .right{
+        margin: 0 10rem;
+    }
+
+    .about .right h1{
+        color: #cbf097;
+        font-size: 10rem;
+    }
+
+    .about .right p{
+        color: #cbf097;
+        font-size: 3rem;
+    }
+
+    /*Academy*/
+
+    .academy{
+        margin-top: 60rem;
+        width: 100%;
+        padding: 5rem 0 10rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(
+            to right,
+            var(--green) 0%, 
+            var(--green) 50%,
+            var(--light-green) 50%,
+            var(--light-green) 100%
+        );
+    }
+
+    .academy h1{
+        font-size: 10rem;
+    }
+
+    .academy .botom{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20rem;
+    }
+
+    .academy .botom img{
+        padding: 0 10rem;
+        margin-top: 20rem;
+    }
+
+    .academy .botom .right .top{
+        padding: 0 0 0 20rem;
+    }
+
+    .academy .botom .right .low{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .academy .botom .right .low img{
+        padding: 0 10rem 0 10rem;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+
+    img{
+        width: 80%;
+    }
+
+    .header .up p{
+        display: none;
+    }
+    .header .botom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 25%;
+    }
+
+    img{
+        width:50%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
